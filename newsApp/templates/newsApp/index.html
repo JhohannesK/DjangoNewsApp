@@ -10,13 +10,21 @@
     <link rel="stylesheet" href="../../static/css/style.css" />
   </head>
   <body>
-    <nav class="flex items-center justify-between fixed shadow-md bg-white">
+    <nav class="flex items-center justify-between shadow-md bg-white">
       <div class="text-3xl text-red-200 shadow-sm shadow-green-500">
         Jhohannes News |
       </div>
       <div>sign in</div>
       <div>navigations</div>
-      <div>search</div>
+      <div class="flex items-center space-x-2">
+        <input
+          class="rounded-lg border-2 border-red-400"
+          placeholder="Search for a topic..."
+          type="text"
+          name="search"
+        />
+        <button class="btn">Search</button>
+      </div>
     </nav>
 
     <!-- header -->
@@ -26,7 +34,7 @@
     </header>
 
     <!-- contents -->
-    <div class="flex items-center justify-center">
+    <!-- <div class="flex items-center justify-center">
       <div class="flex flex-wrap w-[70%] space-y-7 space-x-2">
         {% for desc, news, img, url, source in mylist %}
         <div class="border-2 border-red-500 w-full shadow-lg shadow-red-400">
@@ -40,15 +48,15 @@
           <div>
             <h1>{{ desc }}</h1>
           </div>
-          <div class="hover:text-lg">
-            <a href="{{url}}" target="_blank">See more</a>
+          <div class="hover:text-lg text-blue-600">
+            <a href="{{url}}" target="_blank">See more...</a>
           </div>
           <div>
-            <h2>{{ source.name }}</h2>
+            <h2>Source: {{ source.name }}</h2>
           </div>
         </div>
         {% endfor %}
       </div>
-    </div>
+    </div> -->
   </body>
 </html>
