@@ -9,64 +9,54 @@
     <title>Jhohannes News</title>
     <link rel="stylesheet" href="../../static/css/style.css" />
   </head>
-  <body>
-    <nav class="flex items-center justify-between shadow-md bg-white">
-      <div class="text-3xl text-red-200 shadow-sm shadow-green-500">
-        Jhohannes News |
-      </div>
-      <div>sign in</div>
-      <div>navigations</div>
-      <div class="flex items-center space-x-2">
-        <input
-          class="rounded-lg border-2 border-red-400"
-          placeholder="Search for a topic..."
-          type="text"
-          name="search"
-        />
-        <button class="btn">Search</button>
+  <body class="">
+    <nav class="flex items-center justify-center shadow-md bg-white">
+      <div
+        class="uppercase flex flex-col items-center justify-center mb-2 transition ease-out delay-150 hover:space-y-3 duration-700"
+      >
+        <h2
+          class="text-amber-700 text-3xl mb-3 trans hover:pb-3 hover:border-b-4 hover:border-amber-700"
+        >
+          jhohannes news
+        </h2>
+        <!-- <div class="w-52 h-[0.25rem] bg-amber-700 ml-auto mr-auto"></div> -->
       </div>
     </nav>
 
     <!-- header -->
-    <header class="pt-10 bg-gradient-to-tr from-yellow-300 to-red-400">
+    <!-- <header class="pt-10 bg-gradient-to-tr from-yellow-300 to-red-400">
       <div>News</div>
       <div>Topics</div>
-    </header>
+    </header> -->
 
     <!-- contents -->
-    <!-- <div class="flex items-center justify-center">
-      <div class="flex flex-wrap w-[70%] space-y-7 space-x-2">
+    <article class="flex items-center justify-center">
+      <div class="w-[70%] items-center justify-center">
         {% for desc, news, img, url, source in mylist %}
-        <div class="border-2 border-red-500 w-full shadow-lg shadow-red-400">
-          <div class="">
-            <img src="{{img}}" alt="" class="object-fill w-full" />
-          </div>
+        <div class="flex flex-wrap space-y-7 space-x-2">
+          <div
+            class="rounded-md border-2 border-red-500 w-full shadow-lg shadow-red-400"
+          >
+            <div class="">
+              <img src="{{img}}" alt="" class="object-fill w-full" />
+            </div>
 
-          <div>
-            <h1 class="font-bold text-lg">{{news}}</h1>
+            <div class="flex items-center justify-center">
+              <h1 class="font-bold text-lg">{{news}}</h1>
+            </div>
+            <div class="mr-2 ml-2">
+              <h1>{{ desc }}</h1>
+            </div>
+            <div class="trans hover:text-lg text-blue-600">
+              <a href="{{url}}" target="_blank">See more...</a>
+            </div>
+            <div>
+              <h2>Source: {{ source.name }}</h2>
+            </div>
           </div>
-          <div>
-            <h1>{{ desc }}</h1>
-          </div>
-          <div class="hover:text-lg text-blue-600">
-            <a href="{{url}}" target="_blank">See more...</a>
-          </div>
-          <div>
-            <h2>Source: {{ source.name }}</h2>
-          </div>
+          {% endfor %}
         </div>
-        {% endfor %}
       </div>
-    </div> -->
-
-    <div class="container">
-      <ul class="class-list"></ul>
-    </div>
-
-    <!-- JavaScript -->
-    <script>
-      const searchFrom = document.querySelector(".search");
-      const input = document.querySelector(".input");
-    </script>
+    </article>
   </body>
 </html>
