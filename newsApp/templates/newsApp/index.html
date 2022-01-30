@@ -10,9 +10,12 @@
     <link rel="stylesheet" href="../../static/css/style.css" />
   </head>
   <body class="">
-    <nav class="flex items-center justify-center shadow-md bg-white">
+    <nav class="relative flex items-center shadow-md bg-white">
+      <div class="ml-3">
+        <img src="../../static/images/welc.jpg" alt="" class="h-20 w-28" />
+      </div>
       <div
-        class="uppercase flex flex-col items-center justify-center mb-2 transition ease-out delay-150 hover:space-y-3 duration-700"
+        class="uppercase w-full flex items-center justify-center transition ease-out delay-150 hover:space-y-3 duration-700"
       >
         <h2
           class="text-amber-700 text-3xl mb-3 trans hover:pb-3 hover:border-b-4 hover:border-amber-700"
@@ -42,13 +45,13 @@
             </div>
 
             <div class="flex items-center justify-center">
-              <h1 class="font-bold text-lg">{{news}}</h1>
+              <h1 class="font-bold text-2xl">{{news}}</h1>
             </div>
             <div class="mr-2 ml-2">
-              <h1>{{ desc }}</h1>
+              <h1 class="text-lg">{{ desc }}</h1>
             </div>
             <div class="trans hover:text-lg text-blue-600">
-              <a href="{{url}}" target="_blank">See more...</a>
+              <a href="{{url}}" target="_blank">Continue reading...</a>
             </div>
             <div>
               <h2>Source: {{ source.name }}</h2>
